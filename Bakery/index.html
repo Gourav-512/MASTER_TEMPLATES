@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a0a00" />
+
+  <!-- ===================== SEO META ===================== -->
+  <title>Sweet Cravings Bakery — Handcrafted Cakes & Pastries in [City]</title>
+  <meta name="description" content="Order fresh handcrafted cakes, custom birthday cakes, wedding cakes, pastries and more. Same-day delivery available. Located in [City]." />
+  <meta name="keywords" content="bakery, custom cakes, birthday cakes, wedding cakes, pastries, [City] bakery" />
+  <link rel="canonical" href="https://your-domain.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sweet Cravings Bakery — Handcrafted Cakes & Pastries" />
+  <meta property="og:description" content="Order fresh handcrafted cakes, custom birthday cakes, and pastries. Located in [City]." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com/" />
+  <meta property="og:image" content="https://your-domain.com/assets/images/og-image.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Sweet Cravings Bakery",
+    "image": "https://your-domain.com/assets/images/og-image.jpg",
+    "description": "Handcrafted cakes, custom birthday cakes, wedding cakes and pastries in [City].",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[Street Address]",
+      "addressLocality": "[City]",
+      "addressRegion": "[State]",
+      "postalCode": "[PIN]",
+      "addressCountry": "IN"
+    },
+    "telephone": "[PHONE]",
+    "url": "https://your-domain.com",
+    "openingHours": "Mo-Sa 08:00-21:00",
+    "priceRange": "₹₹",
+    "servesCuisine": "Bakery"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Sweet Cravings Bakery Home">
+        <span class="logo-icon" aria-hidden="true">🎂</span>
+        <span class="logo-text" id="header-business-name">Sweet Cravings</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#custom-cake" class="nav-link">Custom Cakes</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary btn-sm header-cta">Order Now</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-pattern"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-content reveal">
+        <span class="hero-badge">✨ Freshly Baked Daily</span>
+        <h1 class="hero-title">Every Celebration<br /><em>Deserves a Perfect Cake</em></h1>
+        <p class="hero-subtitle">Handcrafted with love and the finest ingredients. From intimate birthdays to grand weddings — we bake memories that last a lifetime.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-lg" id="hero-whatsapp-btn" aria-label="Order on WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.504 5.829L0 24l6.335-1.482A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.493-5.187-1.355l-.373-.213-3.762.88.923-3.65-.232-.386A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Order on WhatsApp
+          </a>
+          <a href="#custom-cake" class="btn btn-outline btn-lg">Custom Cake Enquiry</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>500+</strong>
+            <span>Happy Customers</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <strong>8+</strong>
+            <span>Years of Baking</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <strong>50+</strong>
+            <span>Cake Designs</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay-1" aria-hidden="true">
+        <div class="hero-cake-card">
+          <div class="cake-illustration">
+            <svg viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Decorative cake illustration">
+              <!-- Plate -->
+              <ellipse cx="150" cy="295" rx="120" ry="18" fill="#e8d5b0" opacity="0.6"/>
+              <!-- Cake base tier -->
+              <rect x="60" y="210" width="180" height="80" rx="12" fill="#f5e6c8"/>
+              <rect x="60" y="210" width="180" height="20" rx="8" fill="#e8b86d"/>
+              <!-- Frosting drips on base -->
+              <path d="M80 210 Q95 195 110 210 Q125 195 140 210 Q155 195 170 210 Q185 195 200 210 Q215 195 230 210" stroke="#fff8f0" stroke-width="3" fill="none"/>
+              <!-- Middle tier -->
+              <rect x="85" y="135" width="130" height="80" rx="10" fill="#f9edd6"/>
+              <rect x="85" y="135" width="130" height="18" rx="8" fill="#d4956a"/>
+              <!-- Frosting drips on middle -->
+              <path d="M100 135 Q113 122 126 135 Q139 122 152 135 Q165 122 178 135 Q191 122 200 135" stroke="#fff8f0" stroke-width="2.5" fill="none"/>
+              <!-- Top tier -->
+              <rect x="108" y="72" width="84" height="68" rx="9" fill="#fdf4e7"/>
+              <rect x="108" y="72" width="84" height="15" rx="7" fill="#c97d4e"/>
+              <!-- Frosting drips on top -->
+              <path d="M120 72 Q130 61 140 72 Q150 61 160 72 Q170 61 178 72" stroke="#fff8f0" stroke-width="2" fill="none"/>
+              <!-- Flowers/decorations on top tier -->
+              <circle cx="130" cy="95" r="8" fill="#e85d8a" opacity="0.9"/>
+              <circle cx="150" cy="88" r="6" fill="#ff8fab" opacity="0.9"/>
+              <circle cx="168" cy="95" r="7" fill="#e85d8a" opacity="0.9"/>
+              <!-- Candles -->
+              <rect x="130" y="50" width="5" height="24" rx="2" fill="#ffe0a0"/>
+              <rect x="150" y="45" width="5" height="28" rx="2" fill="#ffd0d0"/>
+              <rect x="164" y="52" width="5" height="22" rx="2" fill="#d0e8ff"/>
+              <!-- Flames -->
+              <ellipse cx="132.5" cy="48" rx="3.5" ry="5" fill="#FF9500" opacity="0.9"/>
+              <ellipse cx="152.5" cy="43" rx="3.5" ry="5" fill="#FF6B00" opacity="0.9"/>
+              <ellipse cx="166.5" cy="50" rx="3.5" ry="5" fill="#FF9500" opacity="0.9"/>
+              <!-- Stars/sparkles -->
+              <text x="30" y="100" font-size="18" fill="#FFD700" opacity="0.7">✦</text>
+              <text x="250" y="140" font-size="14" fill="#FFD700" opacity="0.5">✦</text>
+              <text x="240" y="80" font-size="22" fill="#FFB6C1" opacity="0.6">✦</text>
+              <text x="45" y="180" font-size="12" fill="#FFD700" opacity="0.4">✦</text>
+            </svg>
+          </div>
+          <div class="cake-card-badge">🌸 Made with Love</div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll-cue" aria-label="Scroll down">
+      <span class="scroll-arrow"></span>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about-section" id="about" aria-label="About us">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-img-frame">
+            <div class="about-illustration" aria-hidden="true">
+              <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="140" cy="140" r="130" fill="#fdf4e7"/>
+                <!-- Oven/kitchen illustration -->
+                <rect x="45" y="120" width="190" height="120" rx="12" fill="#d4956a"/>
+                <rect x="55" y="130" width="170" height="100" rx="8" fill="#3d1a00"/>
+                <!-- Oven windows -->
+                <rect x="70" y="145" width="65" height="55" rx="6" fill="#1a0800" stroke="#c97d4e" stroke-width="2"/>
+                <rect x="145" y="145" width="65" height="55" rx="6" fill="#1a0800" stroke="#c97d4e" stroke-width="2"/>
+                <!-- Bread/cake inside oven (glow) -->
+                <ellipse cx="102" cy="185" rx="28" ry="10" fill="#FF9500" opacity="0.4"/>
+                <ellipse cx="177" cy="185" rx="28" ry="10" fill="#FF9500" opacity="0.3"/>
+                <!-- Oven knobs -->
+                <circle cx="80" cy="215" r="8" fill="#c97d4e"/>
+                <circle cx="110" cy="215" r="8" fill="#c97d4e"/>
+                <circle cx="170" cy="215" r="8" fill="#c97d4e"/>
+                <circle cx="200" cy="215" r="8" fill="#c97d4e"/>
+                <!-- Oven top -->
+                <rect x="40" y="100" width="200" height="25" rx="6" fill="#e8b86d"/>
+                <!-- Rolling pin above -->
+                <rect x="80" y="65" width="120" height="16" rx="8" fill="#c97d4e"/>
+                <rect x="70" y="60" width="20" height="26" rx="10" fill="#e8b86d"/>
+                <rect x="190" y="60" width="20" height="26" rx="10" fill="#e8b86d"/>
+                <!-- Flour puff -->
+                <circle cx="140" cy="55" r="22" fill="white" opacity="0.4"/>
+                <circle cx="120" cy="48" r="14" fill="white" opacity="0.3"/>
+                <circle cx="160" cy="48" r="14" fill="white" opacity="0.3"/>
+                <!-- Stars -->
+                <text x="30" y="80" font-size="20" fill="#FFD700" opacity="0.5">✦</text>
+                <text x="220" y="100" font-size="16" fill="#FFD700" opacity="0.4">✦</text>
+              </svg>
+            </div>
+            <div class="about-badge-float">
+              <span>🏆</span>
+              <span>Est. 2016</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal reveal-delay-1">
+          <span class="section-eyebrow">Our Story</span>
+          <h2 class="section-title">Baked with Passion, <br/> Served with Pride</h2>
+          <p class="about-description">What began in a small home kitchen in 2016 has grown into [City]'s most loved artisan bakery. Every recipe is crafted from scratch using the finest local ingredients — no preservatives, no shortcuts.</p>
+          <p class="about-description">Our bakers bring decades of combined expertise to every creation. Whether it's a simple sponge cake or a multi-tiered wedding masterpiece, the same care and attention goes into every single bake.</p>
+          <ul class="about-values" aria-label="Our values">
+            <li>
+              <span class="value-icon" aria-hidden="true">🌾</span>
+              <div>
+                <strong>Fresh Ingredients</strong>
+                <span>Locally sourced, always fresh</span>
+              </div>
+            </li>
+            <li>
+              <span class="value-icon" aria-hidden="true">🎨</span>
+              <div>
+                <strong>Custom Designs</strong>
+                <span>Every cake is unique to you</span>
+              </div>
+            </li>
+            <li>
+              <span class="value-icon" aria-hidden="true">🚚</span>
+              <div>
+                <strong>Home Delivery</strong>
+                <span>Safe delivery to your door</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCTS ===================== -->
+  <section class="section products-section" id="products" aria-label="Our products">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Our Menu</span>
+        <h2 class="section-title">Made Fresh, <em>Every Day</em></h2>
+        <p class="section-subtitle">From classic favourites to seasonal specials — there's always something beautiful coming out of our oven.</p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="product-tabs reveal" role="tablist" aria-label="Product categories">
+        <button class="tab-btn active" role="tab" aria-selected="true" data-tab="cakes" id="tab-cakes">Cakes</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="pastries" id="tab-pastries">Pastries</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="cookies" id="tab-cookies">Cookies</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="cupcakes" id="tab-cupcakes">Cupcakes</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="products-grid" aria-label="Products" aria-live="polite">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CUSTOM CAKE SECTION ===================== -->
+  <section class="section custom-cake-section" id="custom-cake" aria-label="Custom cake enquiry">
+    <div class="container">
+      <div class="custom-cake-grid">
+        <div class="custom-cake-info reveal">
+          <span class="section-eyebrow">Your Vision, Our Art</span>
+          <h2 class="section-title">Design Your <em>Dream Cake</em></h2>
+          <p class="section-subtitle">Every occasion is unique and so is every cake we create. Share your idea — we'll make it real.</p>
+          <ul class="custom-features" aria-label="Custom cake features">
+            <li><span aria-hidden="true">🎂</span> Birthday, Anniversary & Weddings</li>
+            <li><span aria-hidden="true">🎨</span> Any theme, colour or design</li>
+            <li><span aria-hidden="true">🌱</span> Eggless & vegan options available</li>
+            <li><span aria-hidden="true">📅</span> Advance booking recommended (3+ days)</li>
+            <li><span aria-hidden="true">📦</span> Safe packaging & home delivery</li>
+          </ul>
+        </div>
+
+        <div class="form-card reveal reveal-delay-1">
+          <div class="form-card-header">
+            <h3 class="form-title">Custom Cake Enquiry</h3>
+            <p class="form-subtitle">We'll get back to you within 2 hours.</p>
+          </div>
+
+          <form id="enquiry-form" novalidate aria-label="Custom cake enquiry form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="enquiry-name" class="form-label">Your Name <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="enquiry-name" name="name" class="form-input" placeholder="e.g. Priya Sharma" required autocomplete="name" />
+                <span class="field-error" id="enquiry-name-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="enquiry-phone" class="form-label">Phone Number <span class="required" aria-label="required">*</span></label>
+                <input type="tel" id="enquiry-phone" name="phone" class="form-input" placeholder="10-digit mobile number" required autocomplete="tel" />
+                <span class="field-error" id="enquiry-phone-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-cake-type" class="form-label">Cake Type <span class="required" aria-label="required">*</span></label>
+              <select id="enquiry-cake-type" name="cakeType" class="form-input form-select" required>
+                <option value="">Select cake type</option>
+                <option value="Birthday Cake">Birthday Cake</option>
+                <option value="Wedding Cake">Wedding Cake</option>
+                <option value="Anniversary Cake">Anniversary Cake</option>
+                <option value="Baby Shower Cake">Baby Shower Cake</option>
+                <option value="Custom Theme Cake">Custom Theme Cake</option>
+                <option value="Eggless Cake">Eggless Cake</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="field-error" id="enquiry-cake-type-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="enquiry-date" class="form-label">Preferred Date <span class="required" aria-label="required">*</span></label>
+                <input type="date" id="enquiry-date" name="preferredDate" class="form-input" required />
+                <span class="field-error" id="enquiry-date-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="enquiry-quantity" class="form-label">Quantity</label>
+                <input type="text" id="enquiry-quantity" name="quantity" class="form-input" placeholder="e.g. 1 cake, 2 kg" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-message" class="form-label">Describe Your Cake</label>
+              <textarea id="enquiry-message" name="message" class="form-input form-textarea" placeholder="Theme, flavour, design ideas, special instructions..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="enquiry-submit" aria-describedby="form-status-enquiry">
+              <span class="btn-text">Send Enquiry</span>
+              <span class="btn-loading" aria-hidden="true" style="display:none;">Sending…</span>
+            </button>
+          </form>
+
+          <!-- Form States -->
+          <div id="form-status-enquiry" aria-live="polite" aria-atomic="true">
+            <div class="form-success" id="enquiry-success" style="display:none;" role="alert">
+              <div class="success-icon" aria-hidden="true">✅</div>
+              <h4>Enquiry Received!</h4>
+              <p>Thank you! We'll contact you within 2 hours to discuss your custom cake.</p>
+              <p class="form-ref" id="enquiry-ref"></p>
+              <div class="review-prompt">
+                <p>Have you visited us before?</p>
+                <a href="#" id="enquiry-review-btn" class="btn btn-review" target="_blank" rel="noopener noreferrer" style="display:none;">⭐ Leave a Google Review</a>
+              </div>
+            </div>
+            <div class="form-error-msg" id="enquiry-error" style="display:none;" role="alert">
+              <div class="error-icon" aria-hidden="true">⚠️</div>
+              <p>Something went wrong. Please try WhatsApp instead.</p>
+              <a href="#" class="btn btn-whatsapp" id="enquiry-whatsapp-fallback">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.504 5.829L0 24l6.335-1.482A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.493-5.187-1.355l-.373-.213-3.762.88.923-3.65-.232-.386A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="section gallery-section" id="gallery" aria-label="Our gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Our Work</span>
+        <h2 class="section-title">A Taste of What's <em>Possible</em></h2>
+        <p class="section-subtitle">Every cake is a unique creation. Here's a glimpse of some of our favourite works.</p>
+      </div>
+      <div class="gallery-grid reveal" id="gallery-grid" aria-label="Gallery of baked goods">
+        <!-- Gallery items populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFFERS ===================== -->
+  <section class="section offers-section" id="offers" aria-label="Special offers">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Special Offers</span>
+        <h2 class="section-title">Sweet Deals for <em>Every Occasion</em></h2>
+      </div>
+      <div class="offers-grid reveal">
+        <div class="offer-card">
+          <div class="offer-badge">Limited</div>
+          <span class="offer-icon" aria-hidden="true">🎉</span>
+          <h3>Birthday Bundle</h3>
+          <p>Order a custom birthday cake + 12 cupcakes and get 15% off your order.</p>
+          <a href="#" class="btn btn-outline btn-sm offer-whatsapp-btn">Claim on WhatsApp</a>
+        </div>
+        <div class="offer-card offer-featured">
+          <div class="offer-badge offer-badge-gold">Popular</div>
+          <span class="offer-icon" aria-hidden="true">💍</span>
+          <h3>Wedding Package</h3>
+          <p>Multi-tier wedding cakes with complimentary tasting session available. Book 2 weeks in advance.</p>
+          <a href="#custom-cake" class="btn btn-primary btn-sm">Enquire Now</a>
+        </div>
+        <div class="offer-card">
+          <div class="offer-badge">Daily</div>
+          <span class="offer-icon" aria-hidden="true">🥐</span>
+          <h3>Morning Fresh Box</h3>
+          <p>Daily assorted pastries box — croissants, muffins & Danish. Order by 8 PM for next-day delivery.</p>
+          <a href="#" class="btn btn-outline btn-sm offer-whatsapp-btn">Order on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section class="section reviews-section" id="reviews" aria-label="Customer reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Happy Customers</span>
+        <h2 class="section-title">What Our Customers <em>Say</em></h2>
+        <div class="overall-rating" aria-label="Overall rating: 4.9 out of 5">
+          <span class="stars" aria-hidden="true">⭐⭐⭐⭐⭐</span>
+          <strong>4.9</strong>
+          <span class="rating-count">/ 5 — Based on Google Reviews</span>
+        </div>
+      </div>
+      <div class="reviews-grid reveal" id="reviews-grid" aria-label="Customer testimonials">
+        <!-- Populated by JS -->
+      </div>
+      <!-- Google Review CTA -->
+      <div class="review-cta-block reveal">
+        <p>Loved our cakes? Share your experience!</p>
+        <a href="#" id="google-review-btn" class="btn btn-review btn-lg" target="_blank" rel="noopener noreferrer" style="display:none;" aria-label="Leave a Google Review">
+          ⭐ Leave a Google Review
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LOCATION ===================== -->
+  <section class="section location-section" id="location" aria-label="Location and hours">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-info reveal">
+          <span class="section-eyebrow">Find Us</span>
+          <h2 class="section-title">Visit Our <em>Bakery</em></h2>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Address</strong>
+                <p id="loc-address">[Street Address, City, State — PIN]</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">🕐</span>
+              <div>
+                <strong>Opening Hours</strong>
+                <p id="loc-hours">Mon–Sat: 8:00 AM – 9:00 PM<br/>Sunday: 9:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:[PHONE]" class="info-link" id="loc-phone">[PHONE]</a>
+              </div>
+            </div>
+          </div>
+          <div class="location-actions">
+            <a href="#" class="btn btn-primary" id="directions-btn" target="_blank" rel="noopener noreferrer">📍 Get Directions</a>
+            <a href="#" class="btn btn-whatsapp" id="loc-whatsapp-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.504 5.829L0 24l6.335-1.482A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.493-5.187-1.355l-.373-.213-3.762.88.923-3.65-.232-.386A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="map-container reveal reveal-delay-1">
+          <!-- Replace src with actual Google Maps embed URL for the client -->
+          <div class="map-placeholder" id="map-embed-container">
+            <div class="map-placeholder-inner" aria-label="Map placeholder">
+              <span aria-hidden="true">🗺️</span>
+              <p>Google Maps will appear here.</p>
+              <p class="map-hint">Replace the map embed URL in script.js → BUSINESS.mapsEmbedUrl</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section contact-section" id="contact" aria-label="Contact us">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="section-eyebrow">Get in Touch</span>
+          <h2 class="section-title">We'd Love to <em>Hear From You</em></h2>
+          <p>Have a question? Want to place an order? We're just a message away.</p>
+          <div class="contact-ctas">
+            <a href="#" class="contact-cta-btn" id="contact-call-btn">
+              <span aria-hidden="true">📞</span>
+              <div>
+                <strong>Call Us</strong>
+                <span id="contact-phone-label">[PHONE]</span>
+              </div>
+            </a>
+            <a href="#" class="contact-cta-btn contact-cta-whatsapp" id="contact-whatsapp-btn">
+              <span aria-hidden="true">💬</span>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Chat with us now</span>
+              </div>
+            </a>
+          </div>
+          <div class="social-links" id="social-links" aria-label="Social media links">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="form-card reveal reveal-delay-1">
+          <div class="form-card-header">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-subtitle">We reply within a few hours.</p>
+          </div>
+
+          <form id="contact-form" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name <span class="required" aria-label="required">*</span></label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your full name" required autocomplete="name" />
+              <span class="field-error" id="contact-name-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone" class="form-label">Phone Number <span class="required" aria-label="required">*</span></label>
+              <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="10-digit mobile number" required autocomplete="tel" />
+              <span class="field-error" id="contact-phone-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message <span class="required" aria-label="required">*</span></label>
+              <textarea id="contact-message" name="message" class="form-input form-textarea" placeholder="How can we help you?" required></textarea>
+              <span class="field-error" id="contact-message-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="contact-submit" aria-describedby="form-status-contact">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" aria-hidden="true" style="display:none;">Sending…</span>
+            </button>
+          </form>
+
+          <div id="form-status-contact" aria-live="polite" aria-atomic="true">
+            <div class="form-success" id="contact-success" style="display:none;" role="alert">
+              <div class="success-icon" aria-hidden="true">✅</div>
+              <h4>Message Received!</h4>
+              <p>Thank you for reaching out. We'll get back to you very soon.</p>
+              <p class="form-ref" id="contact-ref"></p>
+            </div>
+            <div class="form-error-msg" id="contact-error" style="display:none;" role="alert">
+              <div class="error-icon" aria-hidden="true">⚠️</div>
+              <p>Something went wrong. Please reach us via WhatsApp.</p>
+              <a href="#" class="btn btn-whatsapp" id="contact-whatsapp-fallback">Chat on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo logo-light" aria-label="Sweet Cravings Bakery">
+          <span class="logo-icon" aria-hidden="true">🎂</span>
+          <span class="logo-text" id="footer-business-name">Sweet Cravings</span>
+        </a>
+        <p class="footer-tagline" id="footer-tagline">Handcrafted with love, delivered with care.</p>
+        <div class="footer-social" id="footer-social" aria-label="Social media links">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#custom-cake">Custom Cakes</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">Birthday Cakes</a></li>
+            <li><a href="#products">Wedding Cakes</a></li>
+            <li><a href="#products">Pastries</a></li>
+            <li><a href="#products">Cupcakes</a></li>
+            <li><a href="#custom-cake">Custom Orders</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><span aria-hidden="true">📍</span> <span id="footer-address">[City, State]</span></li>
+            <li><span aria-hidden="true">📞</span> <a href="#" id="footer-phone">[PHONE]</a></li>
+            <li><span aria-hidden="true">🕐</span> Mon–Sat: 8 AM – 9 PM</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p id="footer-copyright">© 2026 Sweet Cravings Bakery. All rights reserved.</p>
+        <p class="footer-credit">Website by <a href="https://winiks.in" target="_blank" rel="noopener noreferrer">WINIKS</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING CTA (Mobile) ===================== -->
+  <div class="floating-cta" id="floating-cta" role="complementary" aria-label="Quick contact buttons">
+    <a href="#" class="floating-btn floating-call" id="floating-call-btn" aria-label="Call us">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0016.09 17.9l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.572 2.81.7A2 2 0 0122 16.92z"></path></svg>
+      <span>Call</span>
+    </a>
+    <a href="#" class="floating-btn floating-whatsapp" id="floating-whatsapp-btn" aria-label="WhatsApp us">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.504 5.829L0 24l6.335-1.482A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.493-5.187-1.355l-.373-.213-3.762.88.923-3.65-.232-.386A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#custom-cake" class="floating-btn floating-order" aria-label="Place order">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.66a2 2 0 001.99-1.61L23 6H6"/></svg>
+      <span>Order</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
