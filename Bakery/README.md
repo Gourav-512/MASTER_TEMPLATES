@@ -3,7 +3,6 @@
 
 ---
 
-
 ## What This Template Includes
 
 | Feature | Status |
