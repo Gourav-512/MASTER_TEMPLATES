@@ -33,16 +33,16 @@ const SERVICES = [
 ];
 
 const TEAM = [
-    { icon: '🧑‍🎨', name: 'Shankar Dange', role: 'Creative Director' },
-    { icon: '👩‍🎤', name: 'Priya K.', role: 'Senior Stylist' },
-    { icon: '🧖‍♀️', name: 'Neha S.', role: 'Skin Expert' }
+    { img: 'https://images.unsplash.com/photo-1595089304381-8b010c7104b2?auto=format&fit=crop&q=80&w=300', name: 'Shankar Dange', role: 'Creative Director' },
+    { img: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=300', name: 'Priya K.', role: 'Senior Stylist' },
+    { img: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&q=80&w=300', name: 'Neha S.', role: 'Skin Expert' }
 ];
 
 const GALLERY_ITEMS = [
-    { icon: '📸', label: 'Bridal Makeup' },
-    { icon: '✂️', label: 'Men\'s Styling' },
-    { icon: '🎨', label: 'Hair Color' },
-    { icon: '💆‍♀️', label: 'Facial Setup' },
+    { img: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=500', label: 'Bridal Makeup' },
+    { img: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=500', label: 'Men\'s Styling' },
+    { img: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=500', label: 'Hair Color' },
+    { img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=500', label: 'Facial Setup' },
 ];
 
 const REVIEWS = [
@@ -84,21 +84,80 @@ function initData() {
     if (sg) sg.innerHTML = SERVICES.map(s => `<div class="service-card"><div class="service-icon">${s.icon}</div><div class="service-name">${s.name}</div><div class="service-desc">${s.desc}</div></div>`).join('');
 
     const tg = $('#team-grid');
-    if (tg) tg.innerHTML = TEAM.map(t => `<div class="team-card"><div class="team-img">${t.icon}</div><div class="team-name">${t.name}</div><div class="team-role">${t.role}</div></div>`).join('');
+    if (tg) tg.innerHTML = TEAM.map(t => `<div class="team-card"><div class="team-img"><img src="${t.img}" alt="${t.name}" crossorigin="anonymous" /></div><div class="team-name">${t.name}</div><div class="team-role">${t.role}</div></div>`).join('');
 
     const gg = $('#gallery-grid');
-    if (gg) gg.innerHTML = GALLERY_ITEMS.map(g => `<div class="gallery-item">${g.icon}</div>`).join('');
+    if (gg) gg.innerHTML = GALLERY_ITEMS.map(g => `<div class="gallery-item"><img src="${g.img}" alt="${g.label}" crossorigin="anonymous" /><div class="overlay"><span>${g.label}</span></div></div>`).join('');
 
     const rg = $('#reviews-grid');
-    if (rg) rg.innerHTML = REVIEWS.map(r => `<div class="review-card"><div class="review-stars">${'★'.repeat(r.stars)}</div><div class="review-text">${r.text}</div><div class="review-author">${r.author}</div></div>`).join('');
+    if (rg) rg.innerHTML = REVIEWS.map(r => `<div class="review-card"><div class="review-stars">${'★'.repeat(r.stars)}</div><div class="review-text">${r.text}</div><div class="review-author"><div class="author-avatar">${r.author.charAt(0)}</div><div class="author-name">${r.author}</div></div></div>`).join('');
 }
 
 function initUX() {
     const h = $('#site-header');
-    window.addEventListener('scroll', () => { if (h) h.style.boxShadow = window.scrollY > 20 ? '0 5px 15px rgba(0,0,0,0.5)' : 'none'; });
+    window.addEventListener('scroll', () => {
+        if (h) {
+            if (window.scrollY > 20) h.classList.add('scrolled');
+            else h.classList.remove('scrolled');
+        }
+    });
 
-    const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } }));
-    $$('.reveal').forEach(el => obs.observe(el));
+    const obs = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }
+    }), { threshold: 0.1 });
+    $$('.reveal, .stagger-item, .mask-reveal').forEach(el => obs.observe(el));
+}
+
+function initInteractions() {
+    // Parallax Hero
+    const scene = $('#parallax-scene');
+    if (scene) {
+        window.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) - 0.5;
+            const y = (e.clientY / window.innerHeight) - 0.5;
+
+            $$('[data-speed]', scene).forEach(el => {
+                const speed = parseFloat(el.getAttribute('data-speed'));
+                const xPos = x * speed * 100;
+                const yPos = y * speed * 100;
+                el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+            });
+        });
+    }
+
+    // Tilt cards
+    $$('.tilt-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const calcX = (y - rect.height / 2) / 10;
+            const calcY = -(x - rect.width / 2) / 10;
+            card.style.transform = `perspective(1000px) rotateX(${calcX}deg) rotateY(${calcY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        });
+    });
+
+    // Magnetic buttons
+    $$('.magnetic').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const h = rect.width / 2;
+            const v = rect.height / 2;
+            const x = (e.clientX - rect.left) - h;
+            const y = (e.clientY - rect.top) - v;
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            const span = btn.querySelector('.btn-text');
+            if (span) span.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+            const span = btn.querySelector('.btn-text');
+            if (span) span.style.transform = 'translate(0, 0)';
+        });
+    });
 }
 
 function initForms() {
@@ -146,4 +205,4 @@ function initForms() {
     if (d) d.min = new Date().toISOString().split('T')[0];
 }
 
-document.addEventListener('DOMContentLoaded', () => { initData(); initUX(); initForms(); });
+document.addEventListener('DOMContentLoaded', () => { initData(); initUX(); initInteractions(); initForms(); });
